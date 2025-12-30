@@ -28,7 +28,33 @@ class Cube:
         print("Right:", self.state[4])
         print("Left", self.state[5])
         print("\n\n")
-
+    
+    def display_flat(self):
+        color_map = {0: 'W', 1: 'Y', 2: 'G', 3: 'B', 4: 'O', 5: 'R'}
+        
+        top = self.state[1]
+        bottom = self.state[0]
+        front = self.state[2]
+        back = self.state[3]
+        right = self.state[4]
+        left = self.state[5]
+        
+        # Display in cross pattern
+        print("        ", color_map[top[3]], color_map[top[2]])
+        print("        ", color_map[top[0]], color_map[top[1]])
+        print()
+        print(color_map[left[3]], color_map[left[2]], " ", 
+              color_map[front[3]], color_map[front[2]], " ",
+              color_map[right[3]], color_map[right[2]], " ",
+              color_map[back[3]], color_map[back[2]])
+        print(color_map[left[0]], color_map[left[1]], " ", 
+              color_map[front[0]], color_map[front[1]], " ",
+              color_map[right[0]], color_map[right[1]], " ",
+              color_map[back[0]], color_map[back[1]])
+        print()
+        print("        ", color_map[bottom[3]], color_map[bottom[2]])
+        print("        ", color_map[bottom[0]], color_map[bottom[1]])
+        print("\n")
     
     def U(self):
         #top face rotate clockwise
@@ -233,9 +259,10 @@ class Cube:
     def L2(self):
         for i in range(2):
             self.L()
-
+        
+#main program
 cube = Cube()
-cube.print_cube()
+cube.display_flat()
 
 while(True):
     move = input("Input your next move: ")
@@ -283,6 +310,4 @@ while(True):
         case _:
             print("Invalid Move.")
     
-    cube.print_cube()
-
-
+    cube.display_flat()

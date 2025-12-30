@@ -261,53 +261,54 @@ class Cube:
             self.L()
         
 #main program
-cube = Cube()
-cube.display_flat()
-
-while(True):
-    move = input("Input your next move: ")
-    
-    if move == "X":
-        break
-
-    match move:
-        case "U":
-            cube.U()
-        case "U\'":
-            cube.U_prime()
-        case "U2":
-            cube.U2()
-        case "D":
-            cube.D()
-        case "D\'":
-            cube.D_prime()
-        case "D2":
-            cube.D2()
-        case "F":
-            cube.F()
-        case "F\'":
-            cube.F_prime()
-        case "F2":
-            cube.F2()
-        case "B":
-            cube.B()
-        case "B\'":
-            cube.B_prime()
-        case "B2":
-            cube.B2()
-        case "R":
-            cube.R()
-        case "R\'":
-            cube.R_prime()
-        case "R2":
-            cube.R2()
-        case "L":
-            cube.L()
-        case "L\'":
-            cube.L_prime()
-        case "L2":
-            cube.L2()
-        case _:
-            print("Invalid Move.")
-    
+if __name__ == "__main__":
+    cube = Cube()
     cube.display_flat()
+
+    while(True):
+        move = input("Input your next move: ")
+    
+        if move == "X":
+            break
+
+        match move:
+            case "U":
+                cube.U()
+            case "U\'":
+                cube.U_prime()
+            case "U2":
+                cube.U2()
+            case "D":
+                cube.D()
+            case "D\'":
+                cube.D_prime()
+            case "D2":
+                cube.D2()
+            case "F":
+                cube.F()
+            case "F\'":
+                cube.F_prime()
+            case "F2":
+                cube.F2()
+            case "B":
+                cube.B()
+            case "B\'":
+                cube.B_prime()
+            case "B2":
+                cube.B2()
+            case "R":
+                cube.R()
+            case "R\'":
+                cube.R_prime()
+            case "R2":
+                cube.R2()
+            case "L":
+                cube.L()
+            case "L\'":
+                cube.L_prime()
+            case "L2":
+                cube.L2()
+            case _:
+                print("Invalid Move.")
+            
+        cube.display_flat()

@@ -9,7 +9,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/AI-Rubiks-Cube-Solver.git
+   git clone https://github.com/Brain256/AI-Rubik-s-Cube-Solver.git
    cd AI-Rubiks-Cube-Solver
    ```
 

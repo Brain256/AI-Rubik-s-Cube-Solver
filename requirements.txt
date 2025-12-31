@@ -1,0 +1,18 @@
+# Core dependencies
+numpy>=1.24.0
+vpython>=7.6.0
+
+# PyTorch (CPU version - for GPU, see BUILD.md)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Reinforcement Learning
+gymnasium>=0.29.0
+stable-baselines3>=2.0.0
+
+# Monitoring and Visualization
+tensorboard>=2.15.0
+matplotlib>=3.7.0
+
+# Utilities
+tqdm>=4.66.0
